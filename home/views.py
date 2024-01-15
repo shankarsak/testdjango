@@ -2,10 +2,10 @@ from django.shortcuts import render, redirect, HttpResponse
 
 # Create your views here.
 def home_view(request):
-    return HttpResponse("working")
+    return render(request, "index.html")
 
 def index(request):
-    now = datetime.now()
+   # now = datetime.now()
     html = f'''
     <html>
         <body>
@@ -14,4 +14,4 @@ def index(request):
         </body>
     </html>
     '''
-    return HttpResponse(html)
+    return HttpResponse("html")
